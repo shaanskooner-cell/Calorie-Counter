@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.main_tag {
+  padding: 30px;
+  text-align: center;
+}
+
+.card-body {
+  background-color: yellow;
+  border-radius: 20px;
+}
+.weight {
+  background-color: blue;
+}
+
+.card {
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.height {
+  background-color: red;
+}
+
+.speed {
+  background-color: green;
+}

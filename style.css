@@ -28,3 +28,7 @@
 .speed {
   background-color: green;
 }
+
+.bi {
+  cursor: pointer;
+}

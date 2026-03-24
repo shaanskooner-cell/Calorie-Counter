@@ -24,49 +24,13 @@
       <div class="card" style="width: 18rem">
         <div class="input-group input-group-lg">
           <input
-            type="text"
+            type="number"
             class="form-control"
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-lg"
-            placeholder="0 mins"
-          />
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Duration</h5>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
-            fill="black"
-            class="bi bi-plus"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
-            fill="black"
-            class="bi bi-dash"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"
-            />
-          </svg>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <div class="input-group input-group-lg">
-          <input
-            type="text"
-            class="form-control"
-            aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-lg"
-            placeholder="0 lbs"
+            placeholder="0 kg"
+            id="user_weight"
+            value="0"
           />
         </div>
         <div class="card-body weight">
@@ -78,6 +42,7 @@
             fill="black"
             class="bi bi-plus"
             viewBox="0 0 16 16"
+            id="plus_weight"
           >
             <path
               d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
@@ -90,6 +55,7 @@
             fill="black"
             class="bi bi-dash"
             viewBox="0 0 16 16"
+            id="minus_weight"
           >
             <path
               d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"
@@ -104,11 +70,13 @@
             class="form-control"
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-lg"
-            placeholder="0 cm"
+            placeholder="0 km"
+            id="Distance"
+            value="0"
           />
         </div>
         <div class="card-body height">
-          <h5 class="card-title">Height</h5>
+          <h5 class="card-title">Distance</h5>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
@@ -116,6 +84,7 @@
             fill="black"
             class="bi bi-plus"
             viewBox="0 0 16 16"
+            id="plus_distance"
           >
             <path
               d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
@@ -128,6 +97,7 @@
             fill="black"
             class="bi bi-dash"
             viewBox="0 0 16 16"
+            id="minus_distance"
           >
             <path
               d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"
@@ -135,50 +105,14 @@
           </svg>
         </div>
       </div>
-      <div class="card" style="width: 18rem">
-        <div class="input-group input-group-lg">
-          <input
-            type="text"
-            class="form-control"
-            aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-lg"
-            placeholder="0 km/h"
-          />
-        </div>
-        <div class="card-body speed">
-          <h5 class="card-title">Speed</h5>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
-            fill="black"
-            class="bi bi-plus"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
-            fill="black"
-            class="bi bi-dash"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"
-            />
-          </svg>
-        </div>
-      </div>
+
       <!-- Button trigger modal -->
       <button
         type="button"
         class="btn btn-info"
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
+        id="button"
       >
         Calculate
       </button>
@@ -206,7 +140,7 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">...</div>
+            <div class="modal-body" id="calorie_burned"></div>
             <div class="modal-footer">
               <button
                 type="button"
@@ -225,5 +159,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="main.js"></script>
   </body>
 </html>

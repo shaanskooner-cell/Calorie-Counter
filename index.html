@@ -21,138 +21,147 @@
       </nav>
     </header>
     <main class="main_tag">
-      <div class="card" style="width: 18rem">
-        <div class="input-group input-group-lg">
-          <input
-            type="number"
-            class="form-control"
-            aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-lg"
-            placeholder="0 kg"
-            id="user_weight"
-            value="0"
-          />
-        </div>
-        <div class="card-body weight">
-          <h5 class="card-title">Weight</h5>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
-            fill="black"
-            class="bi bi-plus"
-            viewBox="0 0 16 16"
-            id="plus_weight"
-          >
-            <path
-              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
-            fill="black"
-            class="bi bi-dash"
-            viewBox="0 0 16 16"
-            id="minus_weight"
-          >
-            <path
-              d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"
-            />
-          </svg>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <div class="input-group input-group-lg">
-          <input
-            type="text"
-            class="form-control"
-            aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-lg"
-            placeholder="0 km"
-            id="Distance"
-            value="0"
-          />
-        </div>
-        <div class="card-body height">
-          <h5 class="card-title">Distance</h5>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
-            fill="black"
-            class="bi bi-plus"
-            viewBox="0 0 16 16"
-            id="plus_distance"
-          >
-            <path
-              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
-            fill="black"
-            class="bi bi-dash"
-            viewBox="0 0 16 16"
-            id="minus_distance"
-          >
-            <path
-              d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"
-            />
-          </svg>
-        </div>
-      </div>
-
-      <!-- Button trigger modal -->
-      <button
-        type="button"
-        class="btn btn-info"
-        data-bs-toggle="modal"
-        data-bs-target="#staticBackdrop"
-        id="button"
-      >
-        Calculate
-      </button>
-
-      <!-- Modal -->
-      <div
-        class="modal fade"
-        id="staticBackdrop"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabindex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                Calories You Burned
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
+      <form>
+        <div class="cards2">
+          <div class="card" style="width: 18rem">
+            <div class="input-group input-group-lg">
+              <input
+                type="number"
+                class="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-lg"
+                placeholder="0 kg"
+                id="user_weight"
+                value="0"
+                required
+                min="0"
+              />
             </div>
-            <div class="modal-body" id="calorie_burned"></div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-danger"
-                data-bs-dismiss="modal"
+            <div class="card-body weight">
+              <h5 class="card-title">Weight</h5>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="black"
+                class="bi bi-plus"
+                viewBox="0 0 16 16"
+                id="plus_weight"
               >
-                Close
-              </button>
+                <path
+                  d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="black"
+                class="bi bi-dash"
+                viewBox="0 0 16 16"
+                id="minus_weight"
+              >
+                <path
+                  d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <div class="input-group input-group-lg">
+              <input
+                type="number"
+                class="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-lg"
+                placeholder="0 km"
+                id="Distance"
+                value="0"
+                required
+                min="0"
+              />
+            </div>
+            <div class="card-body height">
+              <h5 class="card-title">Distance</h5>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="black"
+                class="bi bi-plus"
+                viewBox="0 0 16 16"
+                id="plus_distance"
+              >
+                <path
+                  d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="black"
+                class="bi bi-dash"
+                viewBox="0 0 16 16"
+                id="minus_distance"
+              >
+                <path
+                  d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"
+                />
+              </svg>
             </div>
           </div>
         </div>
-      </div>
+        <div class="button">
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-info"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+            id="button"
+          >
+            Calculate
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="staticBackdrop"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                    Calories You Burned
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body" id="calorie_burned"></div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

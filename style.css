@@ -3,17 +3,28 @@
   margin: 0;
 }
 
+body {
+  background-color: lightcoral;
+}
+
 .main_tag {
   padding: 30px;
   text-align: center;
 }
 
+.cards2 {
+  display: flex;
+  justify-content: space-around;
+}
 .card-body {
   background-color: yellow;
   border-radius: 20px;
 }
 .weight {
-  background-color: blue;
+  background-color: rgb(90, 138, 243);
+  justify-content: space-around;
+  display: flex;
+  height: 60px;
 }
 
 .card {
@@ -22,7 +33,9 @@
 }
 
 .height {
-  background-color: red;
+  background-color: rgb(242, 74, 74);
+  justify-content: space-around;
+  display: flex;
 }
 
 .speed {
@@ -31,4 +44,8 @@
 
 .bi {
   cursor: pointer;
+}
+
+.button {
+  margin-top: 80px;
 }
